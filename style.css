@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Space+Mono:wght@400;700&display=swap');
 
 :root {
-    --bgColor: #223344;
-    --bgColor2: #090a0f;
-    --accentColor: #FFF;
-    --font: 'Karla', sans-serif;
+    --bgColor: #e4dde9;
+    --bgColor2: #FFf;
+    --accentColor: #000000;
+    --font: 'Space Mono';
+    /* --font: 'Karla', sans-serif; */
     --delay: .3s;
 }
 
@@ -13,7 +14,8 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-    background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
+    background: #e4dde9;
+    /* background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%); */
     /* background-image: url('https://bit.ly/3nFVqJh'); */
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
@@ -35,8 +37,21 @@ body {
 
 #userName {
     color: var(--accentColor);
-    font-size: 1rem;
+    font-size: 1.5rem;
+    margin-bottom:10px;
     font-weight: bold;
+    line-height: 1.25;
+    display: block;
+    font-family: var(--font);
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+}
+
+#about {
+    color: var(--accentColor);
+    font-size: 1rem;
+    /* font-weight: bold; */
     line-height: 1.25;
     display: block;
     font-family: var(--font);
@@ -54,16 +69,17 @@ body {
 
 .link {
     position: relative;
-    background-color: transparent;
+    background-color: #FFF;
     color: var(--accentColor);
     border: solid var(--accentColor) 2px;
     border-radius: 10px;
+    box-shadow: rgb(0, 0, 0) 8px 8px 0px 0px;
     font-size: 1rem;
     text-align: center;
     display: block;
     margin-left: 10px;
     margin-right: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     padding: 10px; /* 17px */
     text-decoration: none;
     /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
@@ -72,14 +88,34 @@ body {
 
 @media (hover: hover) {
     .link:hover {
-        background-color: var(--accentColor);
-        color: var(--bgColor);
+        /* background-color: var(--accentColor);
+        color: var(--bgColor2); */
+        transform:translate(4px,4px);
+        box-shadow: rgb(0, 0, 0) 4px 4px 0px 0px;
     }
 }
 
 .link:active {
     background-color: var(--accentColor);
-    color: var(--bgColor);
+    color: var(--bgColor2);
+}
+
+#icon {
+    /* position: relative; */
+    width: 26px;
+    border-radius: 50%;
+    vertical-align:middle;
+    display: inline;
+    margin-right: 5px;
+    /* margin-right: 40px; */
+    /* height: 26px; */
+    /* display: block; */
+    /* margin: auto; */
+    /* /* border-radius: 50%; */
+    /* max-width: 40px; */ 
+    /* width: 26px;
+    margin-left: 40px;
+    margin-top: 5px; */
 }
 
 #hashtag {
@@ -155,7 +191,7 @@ body {
 }
 
 .popup {
-    position: relative;
+    /* position: relative;
     top: -43%;
     /* right: -100vh; */
     display: flex;
@@ -169,7 +205,7 @@ body {
     background-color: var(--bgColor);
     /* transform: rotate(32deg); */
     transform: scale(0);
-    transition: .5s ease-in-out;
+    transition: .5s ease-in-out; */
 }
 
 .popup-quote {
@@ -199,8 +235,8 @@ body {
 }
 
 .overlay:target .popup {
-    transform: scale(1);
-    top: 0;
+    /* transform: scale(1);
+    top: 0; */
     /* right: 0; */
     /* transform: rotate(0); */
 }
