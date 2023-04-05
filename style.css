@@ -48,6 +48,11 @@ body {
     text-decoration: none;
 }
 
+#a {
+    color: var(--accentColor);
+    font-weight: bold;
+}
+
 #about {
     color: var(--accentColor);
     font-size: 1rem;
@@ -61,6 +66,7 @@ body {
 }
 
 #list {
+    font-size: 0.9rem;
     max-width: 675px;
     width: auto;
     display: block;
